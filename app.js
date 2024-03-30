@@ -21,7 +21,7 @@ const RestaurantMenu = lazy(() => import("./components/RestaurantMenu"));
 const AppLayout = () => {
   // const { onlineCheck } = useOnlineCheck();
   return (
-    <div className="app">
+    <div className="">
       <Header />
       {/** Below will load different components based on path */}
       <Suspense fallback={<h1>Loading...</h1>}>
