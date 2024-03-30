@@ -1,0 +1,33 @@
+{
+  "name": "foodylicious",
+  "version": "1.0.0",
+  "description": "Food ordering app",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manish270698/Namaste_React.git"
+  },
+  "author": "Manish Kuamr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manish270698/Namaste_React/issues"
+  },
+  "homepage": "https://github.com/Manish270698/Namaste_React#readme",
+  "dependencies": {
+    "parcel": "^2.9.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
+  }
+}
