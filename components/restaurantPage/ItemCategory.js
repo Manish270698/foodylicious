@@ -19,14 +19,14 @@ const ItemCategory = ({ data }) => {
           onClick={handleExpand}
         >
           <h1>
-            {data.card.card.title.length > 20
-              ? data.card.card.title.slice(0, 15) + "..."
-              : data.card.card.title}{" "}
-            ({data.card.card.itemCards.length})
+            {data?.card?.title?.length > 20
+              ? data?.card?.card?.title.slice(0, 15) + "..."
+              : data?.card?.card?.title}{" "}
+            ({data?.card?.card?.itemCards?.length})
           </h1>
           <img className="h-4 w-4" src={expand} alt="expand icon" />
         </div>
-        {showItems && <ItemCard itemData={data.card.card.itemCards} />}
+        {showItems && <ItemCard itemData={data?.card?.card?.itemCards} />}
       </div>
     </div>
   );
