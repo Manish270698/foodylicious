@@ -1,10 +1,10 @@
 const ShimmerRestaurantMenu = () => {
   return (
     <div>
-      <div className="m-auto w-2/3 pt-28  lg:w-3/5">
+      <div className="m-auto w-3/4 pt-28 lg:w-3/5">
         <div className="mb-4 ml-4">
-          <h1 className="mb-4 h-8 w-48 animate-pulse dark:bg-slate-500 bg-slate-200 pb-2"></h1>
-          <h2 className="h-8 w-28 animate-pulse dark:bg-slate-500 bg-slate-200"></h2>
+          <h1 className="mb-4 h-8 w-48 animate-pulse bg-slate-200 pb-2 dark:bg-slate-500"></h1>
+          <h2 className="h-8 w-28 animate-pulse bg-slate-200 dark:bg-slate-500"></h2>
         </div>
       </div>
       <div className="m-auto w-3/4 rounded-2xl p-8 shadow-lg dark:bg-[#1e293b] lg:w-3/5">
@@ -25,7 +25,7 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl dark:bg-slate-500 bg-slate-200 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
@@ -39,7 +39,7 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl dark:bg-slate-500 bg-slate-200 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
@@ -51,7 +51,7 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl dark:bg-slate-500 bg-slate-200 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
@@ -65,7 +65,7 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl dark:bg-slate-500 bg-slate-200 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
@@ -79,7 +79,7 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl dark:bg-slate-500 bg-slate-200 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
               </div>

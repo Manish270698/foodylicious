@@ -2,22 +2,30 @@ import { useState } from "react";
 
 const ItemDesription = ({ item }) => {
   const [showExtra, setShowExtra] = useState(true);
+  const [extraText, setExtraText] = useState("");
 
   const handleExtra = () => {
     setShowExtra(!showExtra);
+    setExtraText("...less");
   };
   return (
-    <div className="lg:hidden cursor-pointer " onClick={handleExtra}>
-      {showExtra ? (
-        <>
-          {item.card.info.description.slice(0, 45)}
-          <span className="font-bold">...more</span>
-        </>
+    <div>
+      {item.card.info.description.length < 45 ? (
+        <div className="lg:hidden">{item.card.info.description}</div>
       ) : (
-        <>
-          {item.card.info.description}
-          <span className="font-bold">...less</span>
-        </>
+        <div className="cursor-pointer lg:hidden " onClick={handleExtra}>
+          {showExtra && item.card.info.description.length > 45 ? (
+            <>
+              {item.card.info.description.slice(0, 45)}
+              <span className="font-bold">...more</span>
+            </>
+          ) : (
+            <>
+              {item.card.info.description}
+              <span className="font-bold">{extraText}</span>
+            </>
+          )}
+        </div>
       )}
     </div>
   );

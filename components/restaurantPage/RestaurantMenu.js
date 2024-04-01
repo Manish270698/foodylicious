@@ -31,7 +31,7 @@ const RestaurantMenu = () => {
           <h2 className="text-base font-semibold">{costForTwoMessage}</h2>
         </div>
       </div>
-      <div className="m-auto w-3/4 rounded-2xl p-8 shadow-lg dark:bg-[#1e293b] lg:w-3/5">
+      <div className="m-auto w-3/4 rounded-2xl -z-10 p-8 shadow-lg dark:bg-[#1e293b] lg:w-3/5">
         {categories.map((category) => (
           <ItemCategory key={category.card.card.title} data={category} />
         ))}
