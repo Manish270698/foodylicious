@@ -4,6 +4,7 @@ import moon from "../images/moon.png";
 import light from "../images/light.png";
 import cereal from "../images/cereal.png";
 import OfflineAlert from "./OfflineAlert";
+import github from "../images/github.png";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -36,6 +37,16 @@ const Header = () => {
             </li>
             <li className=" hover:scale-105">
               <Link to="/cart">Cart</Link>
+            </li>
+            <li className=" hover:scale-105">
+              <div className="h-6 w-6">
+                <a
+                  href="https://github.com/Manish270698/foodylicious"
+                  target="_blank"
+                >
+                  <img src={github} alt="github" />
+                </a>
+              </div>
             </li>
             <li className=" hover:scale-105">
               <div title="theme" className="h-6 w-6">
