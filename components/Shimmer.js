@@ -2,7 +2,7 @@ import searchIcon from "../images/searchIcon.png";
 
 const Shimmer = () => {
   return (
-    <div className="dark h-screen">
+    <div className="h-screen">
       <div className="pt-28 dark:bg-[#0f172a] dark:text-[#e2e8f0]">
         <div className="sticky top-28 z-10 flex justify-center">
           <div className="flex items-center justify-center">

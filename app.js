@@ -9,20 +9,23 @@ import Shimmer from "./components/Shimmer";
 import Error from "/components/Error";
 // import Cart from "./components/Cart";
 // import RestaurantMenu from "./components/RestaurantMenu";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet, ScrollRestoration } from "react-router-dom";
 import useOnlineCheck from "./utils/useOnlineCheck";
 
 // const Body = lazy(() => import("./components/Body"));
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
 const Cart = lazy(() => import("./components/Cart"));
-const RestaurantMenu = lazy(() => import("./components/RestaurantMenu"));
+const RestaurantMenu = lazy(
+  () => import("./components/restaurantPage/RestaurantMenu"),
+);
 
 const AppLayout = () => {
   // const { onlineCheck } = useOnlineCheck();
   return (
     <div className="">
       <Header />
+      <ScrollRestoration />
       {/** Below will load different components based on path */}
       <Suspense fallback={<h1>Loading...</h1>}>
         <Outlet />

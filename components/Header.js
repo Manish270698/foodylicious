@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div className={`${imgSrc == light ? "dark" : ""}`}>
-      <div className="fixed top-0 z-10 flex w-full justify-between  border-b-[0.01rem] border-[#a8a9aa] font-medium text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
+      <div className="fixed top-0 z-20 flex w-full justify-between  border-b-[0.01rem] border-[#a8a9aa] font-medium text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
         <OfflineAlert />
         <div className="logo">
           <Link to="/">

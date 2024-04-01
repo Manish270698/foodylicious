@@ -1,5 +1,5 @@
 // import resList from "../utils/mockData";
-import Card, { CardPromoted, CardPromoted } from "./Card";
+import Card, { CardPromoted } from "./Card";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import searchIcon from "../images/searchIcon.png";
@@ -18,7 +18,7 @@ const Body = () => {
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="dark">
+    <div className="">
       <div className="pt-28  dark:text-[#e2e8f0]">
         <div className="sticky top-28 z-20 flex justify-center">
           <div className="flex items-center justify-center">
@@ -91,8 +91,8 @@ const Body = () => {
               </button>
             </div>
 
-            <div className="w-[364px] rounded-2xl p-8 dark:bg-[#1e293b] md:w-[602px] lg:w-[907px] xl:w-[1192px]">
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="w-[364px] rounded-2xl p-8 shadow-xl dark:bg-[#1e293b] md:w-[602px] lg:w-[907px] xl:w-[1192px]">
+              <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {filteredResList.map((restaurant) => (
                   <Link
                     key={restaurant?.info.id}

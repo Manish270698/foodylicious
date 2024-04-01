@@ -9,13 +9,12 @@ const Card = (props) => {
     cuisines.join(", ").length > 30
       ? cuisines.join(", ").slice(0, 30) + "..."
       : cuisines.join(", ");
-  console.log(aggregatedDiscountInfoV3);
 
   return (
-    <div className="w-[300px] pb-10 text-[#02060c] hover:scale-95 dark:text-[#e2e8f0] md:w-[253px] lg:w-[253px] xl:w-[253px]">
+    <div className="w-[300px] pb-10 text-[#02060c] hover:scale-95 dark:text-[#e2e8f0] md:w-[253px]">
       <div className="relative">
         <img
-          className="h-[200px] w-[300px] rounded-2xl object-cover md:h-[168px] md:w-[253px] lg:h-[168px] lg:w-[253px] xl:h-[168px] xl:w-[253px]"
+          className="h-[200px] w-[300px] rounded-2xl object-cover md:h-[168px] md:w-[253px] lg:h-[168px]  xl:h-[168px] "
           alt="restaurant image"
           src={RES_IMG + resData.info.cloudinaryImageId}
         ></img>
@@ -53,7 +52,7 @@ export const CardPromoted = (Card) => {
   return (props) => {
     return (
       <div>
-        <label className="text-sm absolute z-10 rounded-br-md rounded-tl-2xl bg-[#0f172a] px-2 text-gray-200">
+        <label className="absolute z-10 rounded-br-md rounded-tl-2xl bg-[#0f172a] px-2 text-sm text-gray-200">
           Promoted
         </label>
         <Card {...props} />
