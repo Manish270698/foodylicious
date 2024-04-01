@@ -23,10 +23,19 @@ const ItemCard = ({ itemData }) => {
                 </div>
                 {Object.entries(item?.card?.info?.ratings?.aggregatedRating)
                   .length !== 0 ? (
-                  <div className="flex items-center gap-1 mb-2 text-xs font-bold">
+                  <div className="mb-2 flex items-center gap-1 text-xs font-bold">
                     <img src={rating} alt="rating" className="h-4 w-4" />
-                    <span>{item?.card?.info?.ratings?.aggregatedRating?.rating}</span>
-                    <span>({item?.card?.info?.ratings?.aggregatedRating?.ratingCountV2})</span>
+                    <span>
+                      {item?.card?.info?.ratings?.aggregatedRating?.rating}
+                    </span>
+                    <span>
+                      (
+                      {
+                        item?.card?.info?.ratings?.aggregatedRating
+                          ?.ratingCountV2
+                      }
+                      )
+                    </span>
                   </div>
                 ) : (
                   ""
@@ -51,8 +60,8 @@ const ItemCard = ({ itemData }) => {
                         className="h-[82px] w-[88px] rounded-xl object-cover md:h-[144] md:w-[156]"
                         src={RES_IMG + item?.card?.info?.imageId}
                       />
-                      <div className="absolute -bottom-3 flex w-[70%] justify-between">
-                        <button className="w-[100%] rounded-xl bg-white px-2 py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:w-[109px] md:text-lg">
+                      <div className="absolute -bottom-3 flex w-[50%] justify-between md:w-[109px]">
+                        <button className="w-[100%] rounded-xl bg-white px-2 py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:text-lg">
                           ADD
                         </button>
                       </div>
@@ -60,7 +69,7 @@ const ItemCard = ({ itemData }) => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <div className="h-[82px] w-[88px] rounded-xl dark:bg-[#0f172a] md:h-[144] md:w-[156]"></div>
-                      <button className="bg-whitepx-2 absolute w-[70%] rounded-xl py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:w-[109px] md:text-lg">
+                      <button className="bg-whitepx-2 absolute w-[50%] rounded-xl py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:w-[109px] md:text-lg">
                         ADD
                       </button>
                     </div>
