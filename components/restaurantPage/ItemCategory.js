@@ -3,13 +3,22 @@ import down from "../../images/down.png";
 import up from "../../images/up.png";
 import ItemCard from "./ItemCard";
 
-const ItemCategory = ({ data }) => {
-  const [expand, setExpand] = useState(up);
-  const [showItems, setShowItems] = useState(true);
-  const handleExpand = () => {
-    setShowItems(!showItems);
-    expand === down ? setExpand(up) : setExpand(down);
-  };
+const ItemCategory = ({
+  data,
+  index,
+  activeIndex,
+  // isActive,
+  setActiveIndex,
+}) => {
+  const [isActive, setIsActive] = useState(index==activeIndex?true:false);
+  // Function for Lifting up the state learning
+  // const handleExpand = () => {
+  //   index === activeIndex ? setActiveIndex(null) : setActiveIndex(index);
+  // };
+
+  const handleExpand=()=>{
+    setIsActive(!isActive);
+  }
 
   return (
     <div className="">
@@ -24,9 +33,13 @@ const ItemCategory = ({ data }) => {
               : data?.card?.card?.title}{" "}
             ({data?.card?.card?.itemCards?.length})
           </h1>
-          <img className="h-4 w-4" src={expand} alt="expand icon" />
+          <img
+            className="h-4 w-4"
+            src={isActive ? up : down}
+            alt="expand icon"
+          />
         </div>
-        {showItems && <ItemCard itemData={data?.card?.card?.itemCards} />}
+        {isActive && <ItemCard itemData={data?.card?.card?.itemCards} />}
       </div>
     </div>
   );

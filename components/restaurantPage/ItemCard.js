@@ -3,7 +3,6 @@ import ItemDescription from "./ItemDescription";
 import rating from "../../images/rating.png";
 
 const ItemCard = ({ itemData }) => {
-  console.log("itemData:", itemData);
 
   return (
     <div className="h-100 relative -top-4 z-0 mb-4 mt-0 rounded-b-2xl py-3 pt-10 text-[#02060c] shadow-lg dark:bg-[#0f172a] dark:text-[#e2e8f0]">
