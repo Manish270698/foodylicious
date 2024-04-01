@@ -8,7 +8,7 @@ const ItemCategory = ({
   index,
   activeIndex,
   // isActive,
-  setActiveIndex,
+  // setActiveIndex,
 }) => {
   const [isActive, setIsActive] = useState(index==activeIndex?true:false);
   // Function for Lifting up the state learning
