@@ -1,17 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import moon from "../images/moon.png";
 import light from "../images/light.png";
 import cereal from "../images/cereal.png";
 import OfflineAlert from "./OfflineAlert";
 import github from "../images/github.png";
+import useThemeContext from "../utils/useThemeContext";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const [imgSrc, setImgSrc] = useState(moon);
 
+  const { setThemeName } = useContext(useThemeContext);
+  console.log(setThemeName);
+  const handleToggle = () => {
+    if (imgSrc == moon) {
+      setImgSrc(light);
+      setThemeName("dark");
+    } else {
+      setThemeName("light");
+      setImgSrc(moon);
+    }
+  };
+
   return (
-    <div className={`${imgSrc == light ? "dark" : ""}`}>
       <div className="fixed top-0 z-20 flex w-full justify-between  border-b-[0.01rem] border-[#a8a9aa] font-medium text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
         <OfflineAlert />
         <div className="logo">
@@ -55,10 +67,7 @@ const Header = () => {
                   id="theme"
                   src={imgSrc}
                   alt="theme"
-                  onClick={() => {
-                    imgSrc == moon ? setImgSrc(light) : setImgSrc(moon);
-                    // return handleToggle();
-                  }}
+                  onClick={(e) => handleToggle()}
                 />
               </div>
             </li>
@@ -77,7 +86,6 @@ const Header = () => {
           </ul>
         </div>
       </div>
-    </div>
   );
 };
 

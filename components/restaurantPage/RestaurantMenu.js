@@ -15,7 +15,7 @@ const RestaurantMenu = () => {
     return <ShimmerRestaurantMenu />;
   }
 
-  const { name, costForTwoMessage, cuisines, areaName, avgRatingString } =
+  const { name, costForTwoMessage} =
     resInfo?.cards[2]?.card?.card?.info;
 
   const categories =

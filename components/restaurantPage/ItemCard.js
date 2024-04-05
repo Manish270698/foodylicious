@@ -66,8 +66,8 @@ const ItemCard = ({ itemData }) => {
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
-                      <div className="h-[82px] w-[88px] rounded-xl dark:bg-[#0f172a] md:h-[144] md:w-[156]"></div>
-                      <button className="bg-whitepx-2 absolute w-[50%] rounded-xl py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:w-[109px] md:text-lg">
+                      <div className="h-[82px] w-[88px] rounded-xl md:h-[144] md:w-[156]"></div>
+                      <button className="absolute w-[50%] rounded-xl bg-white px-2 py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:w-[109px] md:text-lg">
                         ADD
                       </button>
                     </div>

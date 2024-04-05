@@ -1,5 +1,5 @@
 // import React from "react";
-import { React, lazy, Suspense } from "react";
+import { React, lazy, Suspense, useState, createContext } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,8 +9,14 @@ import Shimmer from "./components/Shimmer";
 import Error from "/components/Error";
 // import Cart from "./components/Cart";
 // import RestaurantMenu from "./components/RestaurantMenu";
-import { createBrowserRouter, RouterProvider, Outlet, ScrollRestoration } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  ScrollRestoration,
+} from "react-router-dom";
 import useOnlineCheck from "./utils/useOnlineCheck";
+import useThemeContext from "./utils/useThemeContext";
 
 // const Body = lazy(() => import("./components/Body"));
 const About = lazy(() => import("./components/About"));
@@ -22,9 +28,20 @@ const RestaurantMenu = lazy(
 
 const AppLayout = () => {
   // const { onlineCheck } = useOnlineCheck();
+  const [themeName, setThemeName] = useState("light");
+  const htmlTheme = document.documentElement;
+  if (themeName == "light") {
+    htmlTheme.classList.add("light");
+    htmlTheme.classList.remove("dark");
+  } else {
+    htmlTheme.classList.add("dark");
+    htmlTheme.classList.remove("light");
+  }
   return (
     <div className="">
-      <Header />
+      <useThemeContext.Provider value={{ setThemeName }}>
+        <Header />
+      </useThemeContext.Provider>
       <ScrollRestoration />
       {/** Below will load different components based on path */}
       <Suspense fallback={<h1>Loading...</h1>}>

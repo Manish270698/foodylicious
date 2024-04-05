@@ -5,7 +5,7 @@ const Error = () => {
   console.log(err);
 
   return (
-    <div>
+    <div className="dark:bg-[#0f172a] dark:text-[#e2e8f0]">
       <h1>Oops!!!</h1>
       <h2>Something went wrong!!!</h2>
       {/* <h3>{err.}</h3> */}
