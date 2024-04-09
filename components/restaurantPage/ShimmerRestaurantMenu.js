@@ -15,7 +15,7 @@ const ShimmerRestaurantMenu = () => {
             </div>
             <div className="h-100 relative -top-4 mb-4 mt-0 rounded-b-2xl py-3 pt-7 shadow-2xl dark:bg-[#0f172a]">
               <div>
-                <div className="mb-2 flex w-[100%] flex-wrap justify-between ">
+                <div className="mb-2 flex w-[100%] flex-wrap justify-between">
                   <div className="w-[60%] flex-row pl-4 md:pl-7">
                     <div></div>
                     <div className="mb-2  ">
@@ -25,25 +25,25 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[88px] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
                 <div className="mb-2 flex w-[100%] flex-wrap justify-between ">
                   <div className="w-[60%] flex-row pl-4 md:pl-7">
                     <div></div>
-                    <div className="mb-2  ">
+                    <div className="mb-2">
                       <div className="font-normal opacity-60">
                         <div className="hidden lg:block"></div>
                       </div>
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[88px] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
-                <div className="mb-2 flex w-[100%] flex-wrap justify-between ">
+                <div className="mb-2 flex w-[100%] flex-wrap justify-between">
                   <div className="w-[60%] flex-row pl-4 md:pl-7">
                     <div></div>
                     <div className="mb-2  ">
@@ -51,11 +51,11 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[88px] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
-                <div className="mb-2 flex w-[100%] flex-wrap justify-between ">
+                <div className="mb-2 flex w-[100%] flex-wrap justify-between">
                   <div className="w-[60%] flex-row pl-4 md:pl-7">
                     <div></div>
                     <div className="mb-2  ">
@@ -65,7 +65,7 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[88px] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
                 <hr className="m-4 dark:opacity-20 md:m-7" />
@@ -79,7 +79,7 @@ const ShimmerRestaurantMenu = () => {
                     </div>
                   </div>
                   <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
-                    <div className="h-[82px] w-[100%] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
+                    <div className="h-[82px] w-[88px] animate-pulse rounded-xl bg-slate-200 dark:bg-slate-500 md:h-[144] md:w-[156]"></div>
                   </div>
                 </div>
               </div>

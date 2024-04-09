@@ -10,12 +10,12 @@ class UserClass extends React.Component {
       count: 0,
     };
 
-    console.log(this.props.name ," constrcutor");
+    // console.log(this.props.name ," constrcutor");
   }
 
   componentDidMount(){
-    console.log(this.props.name ," ComponentDidMount");
-    const time = setInterval(()=>console.log("setInterval created"), 2000);
+    // console.log(this.props.name ," ComponentDidMount");
+    // const time = setInterval(()=>console.log("setInterval created"), 2000);
   }
 
   componentWillUnmount(){
@@ -26,7 +26,7 @@ class UserClass extends React.Component {
     const { name, location, contact } = this.props;
     const { count, count2 } = this.state;
 
-    console.log(this.props.name ," render");
+    // console.log(this.props.name ," render");
 
     return (
       <div className="team-card">

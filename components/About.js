@@ -6,15 +6,15 @@ class About extends Component {
   constructor(props) {
     super(props);
 
-    console.log("parent Constructor");
+    // console.log("parent Constructor");
   }
 
   componentDidMount() {
-    console.log("Parent ComponentDidMount");
+    // console.log("Parent ComponentDidMount");
   }
 
   render() {
-    console.log("Parent render");
+    // console.log("Parent render");
 
     return (
       <div className="h-[100vh] dark:text-[#e2e8f0] pt-28">

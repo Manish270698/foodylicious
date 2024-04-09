@@ -15,7 +15,6 @@ import {
   Outlet,
   ScrollRestoration,
 } from "react-router-dom";
-import useOnlineCheck from "./utils/useOnlineCheck";
 import useThemeContext from "./utils/useThemeContext";
 
 // const Body = lazy(() => import("./components/Body"));
@@ -27,8 +26,12 @@ const RestaurantMenu = lazy(
 );
 
 const AppLayout = () => {
+  // reading system theme settings and applying the same to our app
+  const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const isThemeDark = prefersDarkTheme.matches === true;
+
   // const { onlineCheck } = useOnlineCheck();
-  const [themeName, setThemeName] = useState("light");
+  const [themeName, setThemeName] = useState(isThemeDark ? "dark" : "light");
   const htmlTheme = document.documentElement;
   if (themeName == "light") {
     htmlTheme.classList.add("light");
@@ -40,8 +43,9 @@ const AppLayout = () => {
   return (
     <div className="">
       <useThemeContext.Provider value={{ setThemeName }}>
-        <Header />
+        <Header isThemeDark={isThemeDark} />
       </useThemeContext.Provider>
+      {/* restores page scrolled */}
       <ScrollRestoration />
       {/** Below will load different components based on path */}
       <Suspense fallback={<h1>Loading...</h1>}>
