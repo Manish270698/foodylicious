@@ -20,7 +20,7 @@ const Shimmer = () => {
         <div>
           <div className="flex flex-wrap justify-center">
             <div className="relative m-4 ml-4 mt-4 h-10 w-[364px] overflow-hidden md:w-[602px] lg:w-[907px] xl:w-[1192px]">
-              <button className="fixed z-10 mb-4 flex h-8 items-center justify-center rounded-full border-[0.01rem] border-[#a8a9aa] bg-[#ffffff] p-2 text-[#334155]  shadow-xl active:scale-95 dark:border-[#d3deef] dark:bg-[#1e293b] dark:text-[#e2e8f0]">
+              <button className="fixed z-10 mb-4 flex h-8 items-center justify-center rounded-full border-[0.01rem] border-[#a8a9aa] bg-[#ffffff] p-3 text-[#334155]  shadow-xl active:scale-95 dark:border-[#d3deef] dark:bg-[#1e293b] dark:text-[#e2e8f0]">
                 Top Rated Restaurants
               </button>
             </div>

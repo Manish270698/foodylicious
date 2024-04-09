@@ -29,7 +29,7 @@ const Header = ({ isThemeDark }) => {
   };
 
   return (
-    <div className="font-bold fixed top-0 z-20 flex w-full justify-between  border-b-[0.01rem] border-[#a8a9aa] font-medium text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
+    <div className="font-semibold fixed top-0 z-20 flex w-full justify-between  border-b-[0.01rem] border-[#a8a9aa] text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
       <OfflineAlert />
       <div className="logo">
         <Link to="/">
@@ -60,7 +60,7 @@ const Header = ({ isThemeDark }) => {
                   alt="cart"
                   className="h-5 w-5 hover:scale-105"
                 />
-                <div className="absolute bottom-4 left-4 flex h-5 w-5 items-center justify-center rounded-full bg-[#33bd3c] text-xs">
+                <div className="font-thin absolute bottom-4 left-4 flex h-5 w-5 items-center justify-center rounded-full bg-[#33bd3c] text-xs">
                   2
                 </div>
               </Link>

@@ -57,6 +57,7 @@ const ItemCard = ({ itemData }) => {
                       <img
                         className="h-[82px] w-[88px] rounded-xl object-cover shadow-2xl md:h-[144] md:w-[156]"
                         src={RES_IMG + item?.card?.info?.imageId}
+                        alt="item image"
                       />
                       <div className="absolute -bottom-3 flex w-[50%] justify-between md:w-[109px]">
                         <button className="w-[100%] rounded-xl bg-white px-2 py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:text-lg">

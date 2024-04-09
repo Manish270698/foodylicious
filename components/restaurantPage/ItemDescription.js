@@ -10,13 +10,13 @@ const ItemDesription = ({ item }) => {
   };
   return (
     <div>
-      {item.card.info.description.length < 45 ? (
+      {item.card.info.description.length < 75 ? (
         <div className="lg:hidden">{item.card.info.description}</div>
       ) : (
-        <div className="cursor-pointer lg:hidden " onClick={handleExtra}>
-          {showExtra && item.card.info.description.length > 45 ? (
+        <div className="cursor-pointer lg:hidden" onClick={handleExtra}>
+          {showExtra && item.card.info.description.length > 75 ? (
             <>
-              {item.card.info.description.slice(0, 45)}
+              {item.card.info.description.slice(0, 75)}
               <span className="font-bold">...more</span>
             </>
           ) : (
