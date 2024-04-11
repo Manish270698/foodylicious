@@ -35,14 +35,17 @@ const ItemCard = ({ itemData }) => {
                   .length !== 0 ? (
                   <div className="mb-2 flex items-center gap-1 text-xs font-bold">
                     <img src={rating} alt="rating" className="h-4 w-4" />
-                    <span>
+                    <span className="text-green-500">
                       {item?.card?.info?.ratings?.aggregatedRating?.rating}
                     </span>
+
                     <span>
+                      (
                       {
                         item?.card?.info?.ratings?.aggregatedRating
                           ?.ratingCountV2
                       }
+                      )
                     </span>
                   </div>
                 ) : (
@@ -73,9 +76,7 @@ const ItemCard = ({ itemData }) => {
                     ) : (
                       <div className="h-[82px] w-[88px] rounded-xl md:h-[144] md:w-[156]"></div>
                     )}
-                    <ItemButton
-                      item={item}
-                    />
+                    <ItemButton item={item} />
                   </div>
                 </div>
               </div>
