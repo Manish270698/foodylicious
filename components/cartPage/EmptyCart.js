@@ -14,8 +14,8 @@ const EmptyCart = () => {
             className="font-lg mb-6 text-blue-600 visited:text-purple-600"
             to="/"
           >
-            <div className="mt-6 flex w-[100%] cursor-pointer items-center justify-center rounded-2xl border-2 border-slate-200 bg-[#f7d3c2] p-2 text-lg font-bold text-[#ea624d] shadow-2xl active:scale-95 dark:border-slate-400 dark:bg-slate-950 md:w-96">
-              <button>See Restaurants Near You</button>
+            <div className="mt-6 flex w-80 cursor-pointer items-center justify-center rounded-2xl border-2 border-slate-200 bg-[#f7d3c2] p-2 text-lg font-bold text-[#ea624d] shadow-2xl active:scale-95 dark:border-slate-400 dark:bg-slate-950 md:w-96">
+              <button className="w-[100%]">See Restaurants Near You</button>
             </div>
           </Link>
         </div>
