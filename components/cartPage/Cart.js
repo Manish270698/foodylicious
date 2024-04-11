@@ -50,13 +50,13 @@ const Cart = () => {
             <div className="m-auto mb-4 mt-0 flex flex-wrap items-center justify-center rounded-2xl py-3 text-[#484949]  dark:text-[#e2e8f0]">
               <span className="w-1/12"></span>
               <span className="w-5/12 md:w-7/12"></span>
-              <span className="m-auto flex w-2/12 justify-center text-lg font-bold shadow-2xl xl:w-28">
+              <span className="mx-2 flex w-2/12 items-center justify-center p-2 text-lg font-bold xl:w-28">
                 Total:{" "}
               </span>
-              <span className="w-2.2/12 md:w-1.2/12 m-auto shadow-2xl">
+              <span className="w-2.2/12 md:w-1.2/12 m-auto">
                 ₹ {totalCost.toFixed(2)}
               </span>
-              <div className="mt-6 flex cursor-pointer items-center justify-center rounded-2xl border-2 border-slate-200 bg-[#f7d3c2] p-2 px-6 text-lg font-bold text-[#ea624d] shadow-2xl active:scale-95 dark:border-slate-400 dark:bg-slate-950 md:w-96">
+              <div className="mt-6 flex w-72 cursor-pointer items-center justify-center rounded-2xl border-2 border-slate-200 bg-[#f7d3c2] p-2 text-lg font-bold text-[#ea624d] shadow-2xl active:scale-95 dark:border-slate-400 dark:bg-slate-950 md:w-96">
                 <button>Proceed to Pay</button>
               </div>
             </div>

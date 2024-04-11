@@ -30,7 +30,7 @@ const CartItem = ({ data }) => {
 
   return (
     <div>
-      <div className="m-auto mb-4 mt-0 flex flex-wrap items-center justify-center rounded-2xl py-3 text-[#02060c] shadow-lg dark:bg-[#0f172a] dark:text-[#e2e8f0]">
+      <div className="m-auto mb-4 mt-0 flex flex-wrap items-center justify-center rounded-2xl py-3 text-[#484949]  shadow-lg dark:bg-[#0f172a] dark:text-[#e2e8f0] ">
         <span className="flex w-1/12 justify-center">
           <img src={categoryImg} alt="veg/non-veg" className="sticky h-5 w-5" />
         </span>
@@ -38,7 +38,7 @@ const CartItem = ({ data }) => {
         <span className="w-5/12 md:w-7/12">
           <h1 className="">{itemData?.card?.info?.name}</h1>
         </span>
-        <div className="flex mx-2 w-2/12 items-center justify-between rounded-2xl border-2 border-slate-200 p-2 text-lg font-bold text-[#33bd3c] shadow-2xl dark:border-slate-400 dark:bg-slate-600 xl:w-28">
+        <div className="mx-2 flex w-2/12 items-center justify-between rounded-2xl border-2 border-slate-200 p-2 text-lg font-bold text-[#33bd3c] shadow-2xl dark:border-slate-400 dark:bg-slate-600 xl:w-28">
           <button onClick={handleRemoveItem} className="">
             -
           </button>
