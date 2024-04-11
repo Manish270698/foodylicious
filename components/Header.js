@@ -24,7 +24,6 @@ const Header = ({ isThemeDark }) => {
     totalCount += cartItems[item].count; // Access the nested count property
   }
 
-
   const handleToggle = () => {
     if (imgSrc == moon) {
       setImgSrc(light);
@@ -38,7 +37,7 @@ const Header = ({ isThemeDark }) => {
   };
 
   return (
-    <div className="fixed top-0 z-20 flex w-full justify-between border-b-[0.01rem]  border-[#a8a9aa] font-semibold text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
+    <div className="fixed top-0 z-20 flex w-full justify-between font-semibold text-[#334155] shadow-lg backdrop-blur-3xl dark:border-b-[0.01rem] dark:border-[#303235] dark:text-[#e2e8f0]">
       <OfflineAlert />
       <div className="logo">
         <Link to="/">
