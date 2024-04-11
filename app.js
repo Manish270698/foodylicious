@@ -58,11 +58,11 @@ const AppLayout = () => {
 
 const appRouter = createBrowserRouter([
   {
-    path: "/love",
+    path: "/",
     element: <AppLayout />,
     children: [
       {
-        path: "/love",
+        path: "/",
         element: <Body />,
       },
       {
