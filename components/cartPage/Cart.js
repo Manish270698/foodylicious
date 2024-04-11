@@ -27,7 +27,7 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div className=" relative -z-10">
       <div className="relative m-auto flex w-5/6 flex-wrap pt-28 text-[#02060c] dark:text-[#e2e8f0] lg:w-3/5">
         <div className="mb-4">
           <h1 className="pb-2 text-2xl font-bold">Cart</h1>

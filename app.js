@@ -14,6 +14,7 @@ import {
 import useThemeContext from "./utils/useThemeContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Footer from "./components/Footer";
 
 // const Body = lazy(() => import("./components/Body"));
 const About = lazy(() => import("./components/About"));
@@ -50,6 +51,7 @@ const AppLayout = () => {
       <Suspense fallback={<h1>Loading...</h1>}>
         <Outlet />
       </Suspense>
+      <Footer />
     </Provider>
   );
 };
