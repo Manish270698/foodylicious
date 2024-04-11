@@ -1,7 +1,7 @@
 const ShimmerRestaurantMenu = () => {
   return (
     <div>
-      <div className="m-auto w-5/6 pt-28 lg:w-3/5">
+      <div className="min-h-screen m-auto w-5/6 pt-28 lg:w-3/5">
         <div className="mb-4 ml-4">
           <h1 className="mb-4 h-8 w-48 animate-pulse bg-slate-200 pb-2 dark:bg-slate-500"></h1>
           <h2 className="h-8 w-28 animate-pulse bg-slate-200 dark:bg-slate-500"></h2>
