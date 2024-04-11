@@ -35,7 +35,7 @@ const ItemCard = ({ itemData }) => {
                   .length !== 0 ? (
                   <div className="mb-2 flex items-center gap-1 text-xs font-bold">
                     <img src={rating} alt="rating" className="h-4 w-4" />
-                    <span className="text-green-500">
+                    <span className="text-green-700 dark:text-green-500">
                       {item?.card?.info?.ratings?.aggregatedRating?.rating}
                     </span>
 
