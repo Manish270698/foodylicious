@@ -4,11 +4,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Shimmer from "./components/Shimmer";
-// import About from "./components/About";
-// import Contact from "./components/Contact";
 import Error from "/components/Error";
-// import Cart from "./components/Cart";
-// import RestaurantMenu from "./components/RestaurantMenu";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -45,15 +41,15 @@ const AppLayout = () => {
   return (
     // Providing our redux store to our app
     <Provider store={appStore}>
-        <useThemeContext.Provider value={{ setThemeName }}>
-          <Header isThemeDark={isThemeDark} />
-        </useThemeContext.Provider>
-        {/* restores page scrolled */}
-        <ScrollRestoration />
-        {/** Below will load different components based on path */}
-        <Suspense fallback={<h1>Loading...</h1>}>
-          <Outlet />
-        </Suspense>
+      <useThemeContext.Provider value={{ setThemeName }}>
+        <Header isThemeDark={isThemeDark} />
+      </useThemeContext.Provider>
+      {/* restores page scrolled */}
+      <ScrollRestoration />
+      {/** Below will load different components based on path */}
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Outlet />
+      </Suspense>
     </Provider>
   );
 };

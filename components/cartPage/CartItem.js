@@ -20,7 +20,7 @@ const CartItem = ({ data }) => {
   const dispatch = useDispatch();
   // adding item to cart from cart page
   const handleAddItem = () => {
-    console.log(itemData);
+    // console.log(itemData);
     dispatch(addItem(itemData));
   };
   // removing item to cart from cart page
