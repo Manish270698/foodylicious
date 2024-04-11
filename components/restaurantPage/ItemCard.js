@@ -1,10 +1,22 @@
 import { RES_IMG } from "../../utils/constants";
 import ItemDescription from "./ItemDescription";
 import rating from "../../images/rating.png";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../utils/cartSlice";
+import ItemButton from "./ItemButton";
 
 const ItemCard = ({ itemData }) => {
+  const dispatch = useDispatch();
+
+  // dispatcher function
+  const handleAddItem = (item) => {
+    console.log("item: ", item);
+    // dispatch an actions
+    dispatch(addItem(item));
+  };
+
   return (
-    <div className="h-100 relative -top-4 z-0 mb-4 mt-0 rounded-b-2xl py-3 pt-10 text-[#02060c] shadow-lg dark:bg-[#0f172a] dark:text-[#e2e8f0]">
+    <div className="relative -top-4 z-0 mb-4 mt-0 rounded-b-2xl py-3 pt-10 text-[#02060c] shadow-lg dark:bg-[#0f172a] dark:text-[#e2e8f0]">
       <div>
         {itemData?.map((item) => (
           <div key={item?.card?.info?.id}>
@@ -27,12 +39,10 @@ const ItemCard = ({ itemData }) => {
                       {item?.card?.info?.ratings?.aggregatedRating?.rating}
                     </span>
                     <span>
-                      (
                       {
                         item?.card?.info?.ratings?.aggregatedRating
                           ?.ratingCountV2
                       }
-                      )
                     </span>
                   </div>
                 ) : (
@@ -43,7 +53,6 @@ const ItemCard = ({ itemData }) => {
                     <div className="hidden lg:block">
                       {item?.card?.info?.description}
                     </div>
-
                     <ItemDescription item={item} />
                   </div>
                 ) : (
@@ -52,27 +61,22 @@ const ItemCard = ({ itemData }) => {
               </div>
               <div className="flex w-[35%] flex-row-reverse pr-4 md:pr-7">
                 <div className="relative flex h-[82px]  w-[100%] items-start justify-end md:h-[144] md:w-[156]">
-                  {item?.card?.info?.imageId ? (
-                    <div className="flex justify-center">
+                  {/* button rendering based on image availability */}
+
+                  <div className="flex items-center justify-center">
+                    {item?.card?.info?.imageId ? (
                       <img
                         className="h-[82px] w-[88px] rounded-xl object-cover shadow-2xl md:h-[144] md:w-[156]"
                         src={RES_IMG + item?.card?.info?.imageId}
                         alt="item image"
                       />
-                      <div className="absolute -bottom-3 flex w-[50%] justify-between md:w-[109px]">
-                        <button className="w-[100%] rounded-xl bg-white px-2 py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:text-lg">
-                          ADD
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-center">
+                    ) : (
                       <div className="h-[82px] w-[88px] rounded-xl md:h-[144] md:w-[156]"></div>
-                      <button className="absolute w-[50%] rounded-xl bg-white px-2 py-1 text-sm font-bold text-green-500 shadow-lg active:scale-95 dark:bg-slate-700 md:w-[109px] md:text-lg">
-                        ADD
-                      </button>
-                    </div>
-                  )}
+                    )}
+                    <ItemButton
+                      item={item}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

@@ -8,6 +8,7 @@ import github from "../images/github.png";
 import useThemeContext from "../utils/useThemeContext";
 import cart_light from "../images/cart-light.png";
 import cart_dark from "../images/cart-dark.png";
+import { useSelector } from "react-redux";
 
 const Header = ({ isThemeDark }) => {
   const [btnName, setBtnName] = useState("Login");
@@ -15,6 +16,14 @@ const Header = ({ isThemeDark }) => {
   const [cartImg, setCartImg] = useState(isThemeDark ? cart_dark : cart_light);
 
   const { setThemeName } = useContext(useThemeContext);
+  let totalCount = 0;
+  // Subsribing to the store using a Selector
+  const cartItems = useSelector((store) => store.cart.items);
+  // console.log("cartItems: ", cartItems);
+  for (const item in cartItems) {
+    totalCount += cartItems[item].count; // Access the nested count property
+  }
+
 
   const handleToggle = () => {
     if (imgSrc == moon) {
@@ -29,7 +38,7 @@ const Header = ({ isThemeDark }) => {
   };
 
   return (
-    <div className="font-semibold fixed top-0 z-20 flex w-full justify-between  border-b-[0.01rem] border-[#a8a9aa] text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
+    <div className="fixed top-0 z-20 flex w-full justify-between border-b-[0.01rem]  border-[#a8a9aa] font-semibold text-[#334155] shadow-lg backdrop-blur-3xl  dark:border-[#303235] dark:text-[#e2e8f0]">
       <OfflineAlert />
       <div className="logo">
         <Link to="/">
@@ -60,8 +69,8 @@ const Header = ({ isThemeDark }) => {
                   alt="cart"
                   className="h-5 w-5 hover:scale-105"
                 />
-                <div className="font-thin absolute bottom-4 left-4 flex h-5 w-5 items-center justify-center rounded-full bg-[#33bd3c] text-xs">
-                  2
+                <div className="absolute bottom-4 left-4 flex h-5 w-5 items-center justify-center rounded-full bg-[#33bd3c] text-xs font-thin">
+                  {totalCount}
                 </div>
               </Link>
             </div>

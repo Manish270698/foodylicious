@@ -16,11 +16,13 @@ import {
   ScrollRestoration,
 } from "react-router-dom";
 import useThemeContext from "./utils/useThemeContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 // const Body = lazy(() => import("./components/Body"));
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
-const Cart = lazy(() => import("./components/Cart"));
+const Cart = lazy(() => import("./components/cartPage/Cart"));
 const RestaurantMenu = lazy(
   () => import("./components/restaurantPage/RestaurantMenu"),
 );
@@ -41,17 +43,18 @@ const AppLayout = () => {
     htmlTheme.classList.remove("light");
   }
   return (
-    <div className="">
-      <useThemeContext.Provider value={{ setThemeName }}>
-        <Header isThemeDark={isThemeDark} />
-      </useThemeContext.Provider>
-      {/* restores page scrolled */}
-      <ScrollRestoration />
-      {/** Below will load different components based on path */}
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Outlet />
-      </Suspense>
-    </div>
+    // Providing our redux store to our app
+    <Provider store={appStore}>
+        <useThemeContext.Provider value={{ setThemeName }}>
+          <Header isThemeDark={isThemeDark} />
+        </useThemeContext.Provider>
+        {/* restores page scrolled */}
+        <ScrollRestoration />
+        {/** Below will load different components based on path */}
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Outlet />
+        </Suspense>
+    </Provider>
   );
 };
 
