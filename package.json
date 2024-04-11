@@ -19,6 +19,9 @@
   "homepage": "https://github.com/Manish270698/Namaste_React#readme",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "parcel": "^2.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
