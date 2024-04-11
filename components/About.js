@@ -17,7 +17,7 @@ class About extends Component {
     // console.log("Parent render");
 
     return (
-      <div className="h-[100vh] dark:text-[#e2e8f0] pt-28">
+      <div className="h-[100vh] min-h-screen pt-28 dark:text-[#e2e8f0]">
         <h1>About Us</h1>
         <h2>This is Namaste React by Manish</h2>
         <UserClass

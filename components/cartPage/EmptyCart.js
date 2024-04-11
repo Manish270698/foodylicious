@@ -3,7 +3,7 @@ import empty from "../../images/empty.avif";
 
 const EmptyCart = () => {
   return (
-    <div className="-z-10 m-auto flex w-5/6 justify-center rounded-2xl p-8 text-[#484949] shadow-lg dark:bg-[#1e293b] dark:text-[#e2e8f0] lg:w-3/5">
+    <div className="min-h-screen -z-10 m-auto flex w-5/6 justify-center rounded-2xl p-8 text-[#484949] shadow-lg dark:bg-[#1e293b] dark:text-[#e2e8f0] lg:w-3/5">
       <div>
         <h1 className="mb-6 flex justify-center font-semibold">
           {" "}
