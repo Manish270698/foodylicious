@@ -27,7 +27,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="min-h-screen relative z-10">
+    <div className="relative z-10 min-h-screen">
       <div className="relative m-auto flex w-5/6 flex-wrap pt-28 text-[#02060c] dark:text-[#e2e8f0] lg:w-3/5">
         <div className="mb-4">
           <h1 className="pb-2 text-2xl font-bold">Cart</h1>
@@ -56,7 +56,7 @@ const Cart = () => {
               <span className="w-2.2/12 md:w-1.2/12 m-auto shadow-2xl">
                 ₹ {totalCost.toFixed(2)}
               </span>
-              <div className="cursor-pointer mt-6 flex w-80 items-center justify-center rounded-2xl border-2 border-slate-200 bg-[#f7d3c2] p-2 text-lg font-bold text-[#ea624d] shadow-2xl active:scale-95 dark:border-slate-400 dark:bg-slate-950 md:w-96">
+              <div className="mt-6 flex w-72 cursor-pointer items-center justify-center rounded-2xl border-2 border-slate-200 bg-[#f7d3c2] p-2 text-lg font-bold text-[#ea624d] shadow-2xl active:scale-95 dark:border-slate-400 dark:bg-slate-950 md:w-96">
                 <button>Proceed to Pay</button>
               </div>
             </div>
