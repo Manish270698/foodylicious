@@ -18,7 +18,7 @@ const Body = () => {
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
-      <div className="pt-28 dark:text-[#e2e8f0]">
+      <div className="min-h-screen pt-28 dark:text-[#e2e8f0]">
         <div className="sticky top-28 z-20 flex justify-center">
           <div className="flex items-center justify-center">
             {/* Whenever the state varibale changes, React re-renders the whole component. But only the chnaged part is updated */}

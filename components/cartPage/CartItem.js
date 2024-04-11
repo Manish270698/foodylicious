@@ -38,16 +38,16 @@ const CartItem = ({ data }) => {
         <span className="w-5/12 md:w-7/12">
           <h1 className="">{itemData?.card?.info?.name}</h1>
         </span>
-        <div className="m-auto flex w-2/12 items-center justify-between rounded-2xl border-2 border-slate-200 p-2 text-lg font-bold text-[#33bd3c] shadow-2xl dark:border-slate-400 dark:bg-slate-600 xl:w-28">
+        <div className="flex mx-2 w-2/12 items-center justify-between rounded-2xl border-2 border-slate-200 p-2 text-lg font-bold text-[#33bd3c] shadow-2xl dark:border-slate-400 dark:bg-slate-600 xl:w-28">
           <button onClick={handleRemoveItem} className="">
             -
           </button>
-          <p>{count}</p>
+          <p className="flex justify-center">{count}</p>
           <button onClick={handleAddItem} className="">
             +
           </button>
         </div>
-        <div className="w-2.2/12 md:w-1.2/12 m-auto mr-2">
+        <div className="w-2.2/12 md:w-1.2/12 m-auto">
           ₹ {itemPrice.toFixed(2)}
         </div>
       </div>

@@ -26,7 +26,7 @@ const RestaurantMenu = () => {
     );
 
   return (
-    <div className="">
+    <div className="min-h-screen">
       <div className="m-auto w-5/6 pt-28 text-[#02060c] dark:text-[#e2e8f0] lg:w-3/5">
         <div className="mb-4">
           <h1 className="pb-2 text-2xl font-bold">{name}</h1>
