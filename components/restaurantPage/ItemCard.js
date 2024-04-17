@@ -69,7 +69,7 @@ const ItemCard = ({ itemData }) => {
                   <div className="flex items-center justify-center">
                     {item?.card?.info?.imageId ? (
                       <img
-                        className="h-[82px] w-[88px] rounded-xl object-cover shadow-2xl md:h-[144] md:w-[156]"
+                        className="h-[82px] w-[88px] rounded-xl bg-slate-300 object-cover shadow-2xl md:h-[144] md:w-[156]"
                         src={RES_IMG + item?.card?.info?.imageId}
                         alt="item image"
                       />
