@@ -11,7 +11,7 @@ const Card = (props) => {
       : cuisines.join(", ");
 
   return (
-    <div className="w-[300px] pb-10 text-[#02060c] hover:scale-95 dark:text-[#e2e8f0] md:w-[253px]">
+    <div className="w-[300px] pb-10 text-[#02060c] duration-100 ease-in hover:scale-95 dark:text-[#e2e8f0] md:w-[253px]">
       <div className="relative">
         <img
           className="h-[200px] w-[300px] rounded-2xl object-cover md:h-[168px] md:w-[253px] lg:h-[168px]  xl:h-[168px] "

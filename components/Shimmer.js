@@ -26,7 +26,7 @@ const Shimmer = () => {
             </div>
             <div className="w-[364px] rounded-2xl p-8 dark:bg-[#1e293b] md:w-[602px] lg:w-[907px] xl:w-[1192px]">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                <div className="w-[300px] animate-pulse pb-10 hover:scale-95 dark:text-[#e2e8f0] md:w-[253px] lg:w-[253px] xl:w-[253px]">
+                <div className="w-[300px] animate-pulse pb-10 duration-100 ease-in hover:scale-95 dark:text-[#e2e8f0] md:w-[253px] lg:w-[253px] xl:w-[253px]">
                   <div className="h-[200px] w-[300px] animate-pulse rounded-2xl bg-slate-200 object-cover dark:bg-slate-500 md:h-[168px] md:w-[253px] lg:h-[168px] lg:w-[253px] xl:h-[168px] xl:w-[253px]"></div>
                   <div className="h-20 pl-3 pt-2"></div>
                 </div>
