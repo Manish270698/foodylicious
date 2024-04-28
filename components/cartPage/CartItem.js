@@ -29,7 +29,7 @@ const CartItem = ({ data }) => {
   };
 
   return (
-    <div>
+    <div data-testId="addedItem">
       <div className="m-auto mb-4 mt-0 flex flex-wrap items-center justify-center rounded-2xl py-3 text-[#484949]  shadow-lg dark:bg-[#0f172a] dark:text-[#e2e8f0] ">
         <span className="flex w-1/12 justify-center">
           <img src={categoryImg} alt="veg/non-veg" className="sticky h-5 w-5" />

@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 import searchIcon from "../images/searchIcon.png";
 import Shimmer from "./Shimmer";
 import useRestaurants from "../utils/useRestaurants";
+import { ResturantMockData } from "./Mocks/ResturantMockData";
 
 const Body = () => {
   const { restaurantList, filteredResList, setFilteredResList } =
     useRestaurants();
+    // console.log(filteredResList);
 
   const [searchText, setSearchText] = useState("");
   const CardsPromoted = CardPromoted(Card);
@@ -23,6 +25,7 @@ const Body = () => {
           <div className="flex items-center justify-center">
             {/* Whenever the state varibale changes, React re-renders the whole component. But only the chnaged part is updated */}
             <input
+            data-testid="searchInput"
               className=" h-10 rounded-l-full border-[0.01rem] border-[#a8a9aa] bg-[#ffffff] p-4 shadow-xl focus:outline-none   dark:bg-[#1e293b] md:w-96 lg:w-96"
               id="search"
               type="search"

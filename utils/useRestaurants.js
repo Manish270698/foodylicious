@@ -14,14 +14,23 @@ const useRestaurants = () => {
     const json = await data.json();
 
     setRestaurantList(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants,
     );
     setFilteredResList(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants,
     );
   };
 
-  return { restaurantList, setRestaurantList, filteredResList ,setFilteredResList};
+  
+
+  return {
+    restaurantList,
+    setRestaurantList,
+    filteredResList,
+    setFilteredResList,
+  };
 };
 
 export default useRestaurants;

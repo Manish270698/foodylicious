@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import moon from "../images/moon.png";
 import light from "../images/light.png";
@@ -68,7 +68,10 @@ const Header = ({ isThemeDark }) => {
                   alt="cart"
                   className="h-5 w-5 hover:scale-105"
                 />
-                <div className="absolute bottom-4 left-4 flex h-5 w-5 items-center justify-center rounded-full bg-[#33bd3c] text-xs font-thin">
+                <div
+                  data-testid="itemCount"
+                  className="absolute bottom-4 left-4 flex h-5 w-5 items-center justify-center rounded-full bg-[#33bd3c] text-xs font-thin"
+                >
                   {totalCount}
                 </div>
               </Link>
