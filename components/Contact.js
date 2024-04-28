@@ -12,9 +12,9 @@ const Contact = () => {
           <div className="mt-6 flex w-72 cursor-pointer items-center justify-center rounded-2xl border-2 border-slate-200 bg-[#f7d3c2] p-2 text-lg font-bold text-[#ea624d] shadow-2xl active:scale-95 dark:border-slate-400 dark:bg-slate-950 md:w-96">
             <a
               className="p-2 text-sm md:text-lg"
-              href="mailto:manish.namastereact@gmail.com"
+              href="mailto:manish.foodylicious@gmail.com"
             >
-              manish.namastereact@gmail.com
+              manish.foodylicious@gmail.com
             </a>
           </div>
         </div>
